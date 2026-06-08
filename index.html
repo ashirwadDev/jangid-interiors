@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Jangid Interiors</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#090909;color:#fff}
+header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(0,0,0,.8);backdrop-filter:blur(12px);padding:18px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{color:#d4af37;font-size:1.4rem;font-weight:700}
+nav{display:flex;gap:25px}
+nav a{color:#fff;text-decoration:none}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.hamburger span{width:26px;height:3px;background:#d4af37}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;background:linear-gradient(135deg,#000,#111,#1b1b1b)}
+.hero h1{font-size:clamp(3rem,8vw,6rem);color:#d4af37}
+.hero p{max-width:800px;margin:20px auto;color:#ddd}
+.btn{display:inline-block;padding:14px 30px;background:#d4af37;color:#000;text-decoration:none;border-radius:30px;font-weight:bold}
+section{padding:100px 8%}
+h2{text-align:center;color:#d4af37;margin-bottom:35px;font-size:2.3rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#141414;border:1px solid #2a2a2a;padding:25px;border-radius:18px;transition:.3s}
+.card:hover{transform:translateY(-8px);border-color:#d4af37}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+.stat{background:#141414;padding:25px;border-radius:18px;text-align:center}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.project{height:280px;border-radius:18px;background:linear-gradient(135deg,#1f1f1f,#333);display:flex;align-items:center;justify-content:center;color:#d4af37;font-size:1.2rem}
+.timeline .card{position:relative}
+.contact-form input,.contact-form textarea{width:100%;padding:14px;margin:10px 0;background:#111;border:1px solid #333;color:#fff;border-radius:10px}
+.contact-form button{padding:14px 24px;background:#d4af37;border:none;border-radius:10px;font-weight:bold}
+footer{text-align:center;padding:30px;background:#050505}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;padding:16px;border-radius:50%;text-decoration:none}
+.fade{opacity:0;transform:translateY(30px);transition:1s}
+.show{opacity:1;transform:translateY(0)}
+@media(max-width:768px){
+nav{display:none;position:absolute;top:70px;left:0;width:100%;background:#111;flex-direction:column;padding:20px}
+nav.active{display:flex}
+.hamburger{display:flex}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">JANGID INTERIORS</div>
+<div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+<nav id="menu">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#process">Process</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1 id="typed"></h1>
+<p>Luxury Interior Design Studio crafting elegant residential and commercial spaces with premium materials, modern aesthetics and flawless execution.</p>
+<br>
+<a href="#portfolio" class="btn">View Portfolio</a>
+</div>
+</section>
+
+<section id="about" class="fade">
+<h2>About Us</h2>
+<div class="card">
+<h3>Hindaram Jangid</h3><br>
+<p>Jangid Interiors specializes in luxury residential interiors, modular kitchens, bespoke furniture, commercial spaces and turnkey project execution. Our mission is to transform ordinary spaces into timeless masterpieces.</p>
+</div>
+</section>
+
+<section class="fade">
+<h2>Our Numbers</h2>
+<div class="stats">
+<div class="stat"><h1>100+</h1><p>Projects Completed</p></div>
+<div class="stat"><h1>10+</h1><p>Years Experience</p></div>
+<div class="stat"><h1>50+</h1><p>Happy Clients</p></div>
+<div class="stat"><h1>5★</h1><p>Client Satisfaction</p></div>
+</div>
+</section>
+
+<section id="services" class="fade">
+<h2>Services</h2>
+<div class="grid">
+<div class="card">Luxury Home Interiors</div>
+<div class="card">Modular Kitchen Design</div>
+<div class="card">Bedroom & Living Room Design</div>
+<div class="card">Commercial Interiors</div>
+<div class="card">False Ceiling & Lighting</div>
+<div class="card">Turnkey Solutions</div>
+</div>
+</section>
+
+<section id="portfolio" class="fade">
+<h2>Featured Projects</h2>
+<div class="gallery">
+<div class="project">Luxury Living Room</div>
+<div class="project">Modern Bedroom</div>
+<div class="project">Premium Kitchen</div>
+<div class="project">Office Interior</div>
+<div class="project">Villa Project</div>
+<div class="project">Custom Furniture</div>
+</div>
+</section>
+
+<section id="process" class="fade timeline">
+<h2>Our Design Process</h2>
+<div class="grid">
+<div class="card">1. Consultation & Requirement Gathering</div>
+<div class="card">2. Concept & 3D Design</div>
+<div class="card">3. Material Selection</div>
+<div class="card">4. Project Execution</div>
+<div class="card">5. Quality Checks</div>
+<div class="card">6. Final Handover</div>
+</div>
+</section>
+
+<section class="fade">
+<h2>Why Choose Us</h2>
+<div class="grid">
+<div class="card">Premium Materials</div>
+<div class="card">Transparent Pricing</div>
+<div class="card">On-Time Delivery</div>
+<div class="card">Experienced Team</div>
+</div>
+</section>
+
+<section class="fade">
+<h2>Client Testimonials</h2>
+<div class="grid">
+<div class="card">“Amazing attention to detail and premium finish.”</div>
+<div class="card">“Our dream home became reality.”</div>
+<div class="card">“Professional execution from start to finish.”</div>
+</div>
+</section>
+
+<section id="contact" class="fade">
+<h2>Get Free Consultation</h2>
+<form class="contact-form">
+<input placeholder="Your Name">
+<input placeholder="Phone Number">
+<input placeholder="Email Address">
+<textarea rows="5" placeholder="Project Details"></textarea>
+<button type="button">Send Inquiry</button>
+</form>
+<br>
+<div class="card">
+📍 Bhayandar East, Maharashtra<br><br>
+📞 +91 93241 35632<br><br>
+📧 hindaramjangid001@gmail.com
+</div>
+</section>
+
+<footer>© 2026 Jangid Interiors. All Rights Reserved.</footer>
+
+<a class="whatsapp" href="#">💬</a>
+
+<script>
+function toggleMenu(){document.getElementById('menu').classList.toggle('active');}
+
+const words=["Luxury Interior Design","Premium Home Interiors","Elegant Commercial Spaces","Jangid Interiors"];
+let w=0,c=0,d=false; const t=document.getElementById('typed');
+function type(){
+let word=words[w];
+if(!d){t.textContent=word.substring(0,c+1);c++;if(c===word.length){d=true;setTimeout(type,1200);return;}}
+else{t.textContent=word.substring(0,c-1);c--;if(c===0){d=false;w=(w+1)%words.length;}}
+setTimeout(type,d?40:90);
+}
+type();
+
+const ob=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+});
+document.querySelectorAll('.fade').forEach(el=>ob.observe(el));
+</script>
+</body>
+</html>
